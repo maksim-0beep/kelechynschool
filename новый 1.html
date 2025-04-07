@@ -133,25 +133,7 @@
 
     <div class="subject" id="subject"></div>
 
-    <script>
-        const subjects = ["Математика", "Фізика", "Хімія", "Біологія", "Історія", "Література"];
-        const subjectElement = document.getElementById("subject");
-
-        document.body.addEventListener("click", function (event) {
-            // Перевіряємо, не клікнули ми по самому предмету
-            if (event.target !== subjectElement) {
-                const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
-                subjectElement.textContent = randomSubject;
-                subjectElement.style.left = `${event.pageX - 100}px`;
-                subjectElement.style.top = `${event.pageY - 50}px`;
-                subjectElement.style.display = "block";
-
-                setTimeout(() => {
-                    subjectElement.style.display = "none";
-                }, 2000); // Предмет зникне через 2 секунди
-            }
-        });
-    </script>
+   
 
 </body>
 </html>
